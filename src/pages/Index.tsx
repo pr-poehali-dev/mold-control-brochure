@@ -70,7 +70,7 @@ const Index = () => {
         }
 
         .cover-top .school-info {
-          font-size: 8px;
+          font-size: 9px;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: #a09282;
@@ -106,7 +106,7 @@ const Index = () => {
         }
 
         .cover-label {
-          font-size: 9px;
+          font-size: 10px;
           letter-spacing: 0.2em;
           text-transform: uppercase;
           color: #7a6f63;
@@ -124,7 +124,7 @@ const Index = () => {
         .cover-title span { color: #c4a87a; }
 
         .cover-subtitle {
-          font-size: 10.5px;
+          font-size: 11.5px;
           color: #a09282;
           line-height: 1.6;
           font-weight: 300;
@@ -133,7 +133,7 @@ const Index = () => {
         }
 
         .cover-bottom {
-          font-size: 8.5px;
+          font-size: 9.5px;
           color: #5a5248;
           display: flex;
           justify-content: space-between;
@@ -148,7 +148,7 @@ const Index = () => {
         }
 
         .section-label {
-          font-size: 8px;
+          font-size: 9px;
           letter-spacing: 0.18em;
           text-transform: uppercase;
           color: #a09282;
@@ -157,7 +157,7 @@ const Index = () => {
 
         .section-title {
           font-family: 'IBM Plex Serif', serif;
-          font-size: 14px;
+          font-size: 15px;
           font-weight: 600;
           color: #2c2820;
           line-height: 1.3;
@@ -166,7 +166,7 @@ const Index = () => {
         }
 
         .section-intro {
-          font-size: 9px;
+          font-size: 10px;
           color: #4a4238;
           line-height: 1.6;
           font-style: italic;
@@ -202,14 +202,14 @@ const Index = () => {
 
         .reason-text strong {
           display: block;
-          font-size: 9px;
+          font-size: 10px;
           font-weight: 600;
           color: #2c2820;
           margin-bottom: 2px;
         }
 
         .reason-text span {
-          font-size: 8px;
+          font-size: 9px;
           color: #6a5e54;
           line-height: 1.5;
         }
@@ -248,14 +248,14 @@ const Index = () => {
 
         .sign-text strong {
           display: block;
-          font-size: 8.5px;
+          font-size: 9.5px;
           font-weight: 600;
           color: #2c2820;
           margin-bottom: 2px;
         }
 
         .sign-text span {
-          font-size: 8px;
+          font-size: 9px;
           color: #6a5e54;
           line-height: 1.45;
         }
@@ -305,14 +305,14 @@ const Index = () => {
 
         .storage-text strong {
           display: block;
-          font-size: 9px;
+          font-size: 10px;
           font-weight: 600;
           color: #2c2820;
           margin-bottom: 2px;
         }
 
         .storage-text span {
-          font-size: 8px;
+          font-size: 9px;
           color: #6a5e54;
           line-height: 1.5;
         }
@@ -339,7 +339,7 @@ const Index = () => {
         }
 
         .tip-text {
-          font-size: 8px;
+          font-size: 9px;
           color: #4a4238;
           line-height: 1.55;
         }
@@ -362,7 +362,7 @@ const Index = () => {
         }
 
         .fact-box .fact-label {
-          font-size: 7.5px;
+          font-size: 8.5px;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: #c4a87a;
@@ -372,7 +372,7 @@ const Index = () => {
 
         .fact-box p {
           font-family: 'IBM Plex Serif', serif;
-          font-size: 9px;
+          font-size: 10px;
           line-height: 1.6;
           color: #d5cfc7;
           font-style: italic;
@@ -385,7 +385,7 @@ const Index = () => {
         }
 
         .author-info {
-          font-size: 8px;
+          font-size: 9px;
           color: #7a6f63;
           line-height: 1.8;
         }
@@ -427,14 +427,14 @@ const Index = () => {
 
         .prev-text strong {
           display: block;
-          font-size: 9px;
+          font-size: 10px;
           font-weight: 600;
           color: #2c2820;
           margin-bottom: 2px;
         }
 
         .prev-text span {
-          font-size: 8px;
+          font-size: 9px;
           color: #6a5e54;
           line-height: 1.5;
         }
@@ -467,7 +467,7 @@ const Index = () => {
         }
 
         .warning-bar p {
-          font-size: 8px;
+          font-size: 9px;
           color: #5a4a1a;
           line-height: 1.55;
         }
