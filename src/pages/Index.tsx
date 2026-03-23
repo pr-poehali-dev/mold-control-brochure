@@ -731,7 +731,24 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="page-hint">Для печати: Ctrl+P → A4 → горизонтальная ориентация → без полей</div>
+      <button
+        onClick={() => window.print()}
+        style={{
+          background: '#2c2820',
+          color: '#faf8f5',
+          border: 'none',
+          padding: '12px 32px',
+          fontFamily: "'IBM Plex Sans', sans-serif",
+          fontSize: '13px',
+          fontWeight: 500,
+          letterSpacing: '0.08em',
+          borderRadius: '4px',
+          cursor: 'pointer',
+        }}
+      >
+        🖨️&nbsp; Распечатать буклет
+      </button>
+      <div className="page-hint">A4 · горизонтальная ориентация · без полей</div>
     </div>
   );
 };
