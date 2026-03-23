@@ -49,22 +49,19 @@ const Index = () => {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           box-shadow: 0 8px 40px rgba(0,0,0,0.13);
-          position: relative;
           overflow: hidden;
         }
 
         .panel {
-          padding: 18mm 13mm;
+          padding: 16mm 12mm;
           border-right: 0.5px solid #d5cfc7;
           display: flex;
           flex-direction: column;
-          gap: 14px;
-          position: relative;
+          gap: 10px;
+          overflow: hidden;
         }
 
-        .panel:last-child {
-          border-right: none;
-        }
+        .panel:last-child { border-right: none; }
 
         .panel-cover {
           background: #2c2820;
@@ -73,7 +70,7 @@ const Index = () => {
         }
 
         .cover-top .school-info {
-          font-size: 7.5px;
+          font-size: 7px;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: #a09282;
@@ -86,12 +83,26 @@ const Index = () => {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          gap: 20px;
+          gap: 16px;
         }
 
-        .cover-icon {
-          font-size: 52px;
-          line-height: 1;
+        .cover-bread {
+          width: 48px;
+          height: 32px;
+          background: #c4a87a;
+          border-radius: 50% 50% 8px 8px;
+          position: relative;
+        }
+
+        .cover-bread::after {
+          content: '';
+          position: absolute;
+          top: -6px;
+          left: 8px;
+          width: 32px;
+          height: 14px;
+          background: #d4b88a;
+          border-radius: 50%;
         }
 
         .cover-label {
@@ -110,18 +121,15 @@ const Index = () => {
           color: #faf8f5;
         }
 
-        .cover-title span {
-          color: #c4a87a;
-        }
+        .cover-title span { color: #c4a87a; }
 
         .cover-subtitle {
-          font-size: 10px;
+          font-size: 9.5px;
           color: #a09282;
           line-height: 1.6;
           font-weight: 300;
           border-top: 0.5px solid #3d3830;
-          padding-top: 12px;
-          margin-top: 4px;
+          padding-top: 10px;
         }
 
         .cover-bottom {
@@ -140,7 +148,7 @@ const Index = () => {
         }
 
         .section-label {
-          font-size: 7.5px;
+          font-size: 7px;
           letter-spacing: 0.18em;
           text-transform: uppercase;
           color: #a09282;
@@ -149,19 +157,18 @@ const Index = () => {
 
         .section-title {
           font-family: 'IBM Plex Serif', serif;
-          font-size: 13px;
+          font-size: 12.5px;
           font-weight: 600;
           color: #2c2820;
           line-height: 1.3;
           border-bottom: 1.5px solid #2c2820;
-          padding-bottom: 7px;
-          margin-bottom: 2px;
+          padding-bottom: 6px;
         }
 
         .section-intro {
-          font-size: 8.5px;
+          font-size: 8px;
           color: #4a4238;
-          line-height: 1.65;
+          line-height: 1.6;
           font-style: italic;
           font-family: 'IBM Plex Serif', serif;
         }
@@ -169,23 +176,22 @@ const Index = () => {
         .reason-list {
           display: flex;
           flex-direction: column;
-          gap: 9px;
-          margin-top: 2px;
+          gap: 7px;
         }
 
         .reason-item {
           display: flex;
-          gap: 9px;
+          gap: 8px;
           align-items: flex-start;
         }
 
         .reason-num {
-          width: 18px;
-          height: 18px;
-          min-width: 18px;
+          width: 16px;
+          height: 16px;
+          min-width: 16px;
           background: #2c2820;
           color: #faf8f5;
-          font-size: 7.5px;
+          font-size: 7px;
           font-weight: 600;
           display: flex;
           align-items: center;
@@ -196,59 +202,69 @@ const Index = () => {
 
         .reason-text strong {
           display: block;
-          font-size: 8.5px;
-          font-weight: 600;
-          color: #2c2820;
-          margin-bottom: 2px;
-        }
-
-        .reason-text span {
-          font-size: 7.5px;
-          color: #6a5e54;
-          line-height: 1.55;
-        }
-
-        .signs-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-        }
-
-        .sign-item {
-          display: flex;
-          align-items: flex-start;
-          gap: 8px;
-          background: #f3efe9;
-          padding: 7px 9px;
-          border-radius: 4px;
-          border-left: 2.5px solid #c4a87a;
-        }
-
-        .sign-emoji {
-          font-size: 14px;
-          line-height: 1;
-          margin-top: 1px;
-        }
-
-        .sign-text strong {
-          display: block;
           font-size: 8px;
           font-weight: 600;
           color: #2c2820;
           margin-bottom: 2px;
         }
 
-        .sign-text span {
-          font-size: 7.5px;
+        .reason-text span {
+          font-size: 7px;
           color: #6a5e54;
           line-height: 1.5;
+        }
+
+        .signs-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .sign-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 7px;
+          background: #f3efe9;
+          padding: 6px 8px;
+          border-radius: 3px;
+          border-left: 2.5px solid #c4a87a;
+        }
+
+        .sign-dot {
+          width: 10px;
+          height: 10px;
+          min-width: 10px;
+          border-radius: 50%;
+          margin-top: 2px;
+        }
+
+        .sign-dot-black { background: #2c2820; }
+        .sign-dot-green { background: #5a8a4a; }
+        .sign-dot-white { background: #d5cfc7; border: 1px solid #b0a898; }
+        .sign-dot-eye { background: #c4a87a; }
+        .sign-dot-nose { background: #8a6a5a; }
+        .sign-dot-hand { background: #d4a888; }
+        .sign-dot-spot { background: #7a5a3a; }
+
+        .sign-text strong {
+          display: block;
+          font-size: 7.5px;
+          font-weight: 600;
+          color: #2c2820;
+          margin-bottom: 2px;
+        }
+
+        .sign-text span {
+          font-size: 7px;
+          color: #6a5e54;
+          line-height: 1.45;
         }
 
         .divider {
           width: 100%;
           height: 0.5px;
           background: #d5cfc7;
-          margin: 4px 0;
+          margin: 2px 0;
         }
 
         .booklet-back {
@@ -264,45 +280,52 @@ const Index = () => {
         .storage-grid {
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 7px;
         }
 
         .storage-item {
           display: flex;
-          gap: 9px;
+          gap: 8px;
           align-items: flex-start;
         }
 
-        .storage-icon {
-          font-size: 15px;
-          line-height: 1;
+        .storage-mark {
+          width: 18px;
+          height: 18px;
+          min-width: 18px;
+          border-radius: 3px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 7px;
+          font-weight: 700;
+          color: #faf8f5;
           margin-top: 1px;
-          min-width: 20px;
         }
 
         .storage-text strong {
           display: block;
-          font-size: 8.5px;
+          font-size: 8px;
           font-weight: 600;
           color: #2c2820;
           margin-bottom: 2px;
         }
 
         .storage-text span {
-          font-size: 7.5px;
+          font-size: 7px;
           color: #6a5e54;
-          line-height: 1.55;
+          line-height: 1.5;
         }
 
         .tips-list {
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 7px;
         }
 
         .tip-item {
           display: flex;
-          gap: 8px;
+          gap: 7px;
           align-items: flex-start;
         }
 
@@ -312,13 +335,13 @@ const Index = () => {
           min-width: 5px;
           background: #c4a87a;
           border-radius: 50%;
-          margin-top: 5px;
+          margin-top: 4px;
         }
 
         .tip-text {
-          font-size: 7.5px;
+          font-size: 7px;
           color: #4a4238;
-          line-height: 1.6;
+          line-height: 1.55;
         }
 
         .tip-text strong {
@@ -334,23 +357,23 @@ const Index = () => {
         .fact-box {
           background: #2c2820;
           color: #faf8f5;
-          padding: 14px;
-          border-radius: 6px;
+          padding: 12px;
+          border-radius: 4px;
         }
 
         .fact-box .fact-label {
-          font-size: 7px;
+          font-size: 6.5px;
           letter-spacing: 0.15em;
           text-transform: uppercase;
           color: #c4a87a;
           font-weight: 500;
-          margin-bottom: 6px;
+          margin-bottom: 5px;
         }
 
         .fact-box p {
           font-family: 'IBM Plex Serif', serif;
-          font-size: 8.5px;
-          line-height: 1.65;
+          font-size: 8px;
+          line-height: 1.6;
           color: #d5cfc7;
           font-style: italic;
         }
@@ -358,7 +381,7 @@ const Index = () => {
         .back-cover-bottom {
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: 8px;
         }
 
         .author-info {
@@ -367,64 +390,89 @@ const Index = () => {
           line-height: 1.8;
         }
 
+        .author-info span {
+          color: #c4a87a;
+          font-weight: 600;
+        }
+
         .prevention-items {
           display: flex;
           flex-direction: column;
-          gap: 9px;
+          gap: 7px;
         }
 
         .prev-item {
           background: #faf8f5;
-          border-radius: 5px;
-          padding: 8px 10px;
+          border-radius: 4px;
+          padding: 7px 9px;
           display: flex;
-          gap: 10px;
+          gap: 9px;
           align-items: flex-start;
         }
 
-        .prev-emoji {
-          font-size: 16px;
-          line-height: 1;
+        .prev-mark {
+          width: 18px;
+          height: 18px;
+          min-width: 18px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 9px;
+          font-weight: 700;
+          color: #faf8f5;
+          margin-top: 1px;
+          background: #5a7a5a;
         }
 
         .prev-text strong {
           display: block;
-          font-size: 8.5px;
+          font-size: 8px;
           font-weight: 600;
           color: #2c2820;
           margin-bottom: 2px;
         }
 
         .prev-text span {
-          font-size: 7.5px;
+          font-size: 7px;
           color: #6a5e54;
-          line-height: 1.55;
+          line-height: 1.5;
         }
 
         .warning-bar {
           background: #f5e6c8;
           border: 1px solid #e8c97a;
-          border-radius: 5px;
-          padding: 8px 10px;
+          border-radius: 4px;
+          padding: 7px 9px;
           display: flex;
           align-items: flex-start;
-          gap: 8px;
-          margin-top: 4px;
+          gap: 7px;
+          margin-top: 3px;
         }
 
-        .warning-bar .warn-icon {
-          font-size: 13px;
+        .warn-mark {
+          width: 14px;
+          height: 14px;
+          min-width: 14px;
+          background: #c4a87a;
+          color: #2c2820;
+          font-size: 8px;
+          font-weight: 800;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin-top: 1px;
+          flex-shrink: 0;
         }
 
         .warning-bar p {
-          font-size: 7.5px;
+          font-size: 7px;
           color: #5a4a1a;
           line-height: 1.55;
         }
 
-        .warning-bar strong {
-          font-weight: 600;
-        }
+        .warning-bar strong { font-weight: 600; }
 
         .page-hint {
           font-size: 11px;
@@ -433,10 +481,41 @@ const Index = () => {
           letter-spacing: 0.05em;
         }
 
+        .print-btn {
+          background: #2c2820;
+          color: #faf8f5;
+          border: none;
+          padding: 12px 32px;
+          font-family: 'IBM Plex Sans', sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+          letter-spacing: 0.08em;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
         @media print {
-          .booklet-wrapper { padding: 0; background: white; gap: 0; }
-          .booklet-a4, .booklet-back { box-shadow: none; page-break-after: always; width: 297mm; height: 210mm; }
-          .booklet-title-area, .page-hint { display: none; }
+          @page { size: A4 landscape; margin: 0; }
+          html, body { margin: 0 !important; padding: 0 !important; background: white !important; }
+          .booklet-wrapper {
+            padding: 0 !important;
+            background: white !important;
+            gap: 0 !important;
+            display: block !important;
+            min-height: unset !important;
+          }
+          .booklet-a4, .booklet-back {
+            box-shadow: none !important;
+            page-break-after: always !important;
+            break-after: page !important;
+            width: 297mm !important;
+            height: 210mm !important;
+            overflow: hidden !important;
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr !important;
+          }
+          .booklet-title-area, .page-hint, .print-btn { display: none !important; }
+          * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
         }
       `}</style>
 
@@ -459,7 +538,7 @@ const Index = () => {
             </div>
           </div>
           <div className="cover-main">
-            <div className="cover-icon">🍞</div>
+            <div className="cover-bread" />
             <div>
               <div className="cover-label">Буклет-памятка</div>
               <div className="cover-title">
@@ -488,34 +567,34 @@ const Index = () => {
             Плесень — это микроскопические грибки, споры которых постоянно присутствуют в воздухе вокруг нас.
           </div>
           <div className="reason-list">
-            <div style={{ fontSize: '7.5px', color: '#4a4238', lineHeight: 1.65 }}>
+            <div style={{ fontSize: '7px', color: '#4a4238', lineHeight: 1.6 }}>
               При попадании на влажную и питательную среду — например, на хлеб — споры прорастают и образуют колонии, которые видны как пушистый налёт серого, зелёного или чёрного цвета.
             </div>
             <div className="divider" />
-            <div style={{ fontFamily: "'IBM Plex Serif', serif", fontSize: '8.5px', fontStyle: 'italic', color: '#5a5248', lineHeight: 1.6 }}>
-              «Плесень на хлебе — это не просто косметический дефект. Грибки выделяют токсины (микотоксины), опасные для здоровья человека.»
+            <div style={{ fontFamily: "'IBM Plex Serif', serif", fontSize: '8px', fontStyle: 'italic', color: '#5a5248', lineHeight: 1.55 }}>
+              «Грибки выделяют токсины (микотоксины), опасные для здоровья человека — это не просто косметический дефект.»
             </div>
             <div className="divider" />
-            <div style={{ fontSize: '8.5px', fontWeight: 600, color: '#2c2820', marginBottom: '4px' }}>
+            <div style={{ fontSize: '8px', fontWeight: 600, color: '#2c2820', marginBottom: '3px' }}>
               Распространённые виды:
             </div>
             <div className="signs-grid">
               <div className="sign-item">
-                <div className="sign-emoji">⚫</div>
+                <div className="sign-dot sign-dot-black" />
                 <div className="sign-text">
                   <strong>Aspergillus niger</strong>
                   <span>Чёрная плесень — самый частый вид на хлебе</span>
                 </div>
               </div>
               <div className="sign-item">
-                <div className="sign-emoji">🟢</div>
+                <div className="sign-dot sign-dot-green" />
                 <div className="sign-text">
                   <strong>Penicillium</strong>
                   <span>Зелёная плесень — выделяет антибиотик пенициллин</span>
                 </div>
               </div>
               <div className="sign-item">
-                <div className="sign-emoji">⬜</div>
+                <div className="sign-dot sign-dot-white" />
                 <div className="sign-text">
                   <strong>Rhizopus stolonifer</strong>
                   <span>Белый пушистый налёт, быстро распространяется</span>
@@ -533,48 +612,22 @@ const Index = () => {
             Для роста плесени необходимы определённые условия — устраните их, и хлеб сохранится дольше.
           </div>
           <div className="reason-list">
-            <div className="reason-item">
-              <div className="reason-num">1</div>
-              <div className="reason-text">
-                <strong>Повышенная влажность</strong>
-                <span>Споры прорастают при влажности выше 70–80%. Влажный хлеб — идеальная среда.</span>
+            {[
+              ['Повышенная влажность', 'Споры прорастают при влажности выше 70–80%. Влажный хлеб — идеальная среда.'],
+              ['Тепло и комнатная температура', 'Оптимальная температура для роста — 20–30°C, это обычная температура кухни.'],
+              ['Споры в воздухе', 'Споры грибков постоянно присутствуют в воздухе и оседают на поверхность.'],
+              ['Хранение в полиэтиленовом пакете', 'Задерживает влагу и создаёт «парниковый эффект» — идеальные условия для грибка.'],
+              ['Контакт с заражённым хлебом', 'Споры переходят от заплесневелого куска к свежему при хранении рядом.'],
+              ['Отсутствие консервантов', 'Домашний хлеб без добавок плесневеет значительно быстрее магазинного.'],
+            ].map(([title, desc], i) => (
+              <div className="reason-item" key={i}>
+                <div className="reason-num">{i + 1}</div>
+                <div className="reason-text">
+                  <strong>{title}</strong>
+                  <span>{desc}</span>
+                </div>
               </div>
-            </div>
-            <div className="reason-item">
-              <div className="reason-num">2</div>
-              <div className="reason-text">
-                <strong>Тепло и комнатная температура</strong>
-                <span>Оптимальная температура для роста — 20–30°C, это обычная температура кухни.</span>
-              </div>
-            </div>
-            <div className="reason-item">
-              <div className="reason-num">3</div>
-              <div className="reason-text">
-                <strong>Споры в воздухе</strong>
-                <span>Споры грибков постоянно присутствуют в воздухе и оседают на поверхность.</span>
-              </div>
-            </div>
-            <div className="reason-item">
-              <div className="reason-num">4</div>
-              <div className="reason-text">
-                <strong>Хранение в полиэтиленовом пакете</strong>
-                <span>Задерживает влагу и создаёт «парниковый эффект» — идеальные условия для грибка.</span>
-              </div>
-            </div>
-            <div className="reason-item">
-              <div className="reason-num">5</div>
-              <div className="reason-text">
-                <strong>Контакт с заражённым хлебом</strong>
-                <span>Споры переходят от заплесневелого куска к свежему при хранении рядом.</span>
-              </div>
-            </div>
-            <div className="reason-item">
-              <div className="reason-num">6</div>
-              <div className="reason-text">
-                <strong>Отсутствие консервантов</strong>
-                <span>Домашний хлеб без добавок плесневеет значительно быстрее магазинного.</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -592,28 +645,28 @@ const Index = () => {
           </div>
           <div className="signs-grid">
             <div className="sign-item">
-              <div className="sign-emoji">👁️</div>
+              <div className="sign-dot sign-dot-spot" />
               <div className="sign-text">
                 <strong>Видимый налёт</strong>
                 <span>Пятна белого, серого, зелёного или чёрного цвета на поверхности хлеба</span>
               </div>
             </div>
             <div className="sign-item">
-              <div className="sign-emoji">👃</div>
+              <div className="sign-dot sign-dot-nose" />
               <div className="sign-text">
                 <strong>Неприятный запах</strong>
                 <span>Кислый, затхлый или землистый запах — грибки выделяют летучие вещества</span>
               </div>
             </div>
             <div className="sign-item">
-              <div className="sign-emoji">🤚</div>
+              <div className="sign-dot sign-dot-hand" />
               <div className="sign-text">
                 <strong>Изменение текстуры</strong>
                 <span>Хлеб становится липким, слишком мягким или необычно крошится</span>
               </div>
             </div>
             <div className="sign-item">
-              <div className="sign-emoji">🎨</div>
+              <div className="sign-dot sign-dot-green" />
               <div className="sign-text">
                 <strong>Цветные пятна в мякише</strong>
                 <span>Тёмные или цветные пятна внутри указывают на глубокое заражение</span>
@@ -621,7 +674,7 @@ const Index = () => {
             </div>
           </div>
           <div className="warning-bar">
-            <div className="warn-icon">⚠️</div>
+            <div className="warn-mark">!</div>
             <p><strong>Важно!</strong> Нельзя срезать плесень и есть оставшуюся часть — невидимый мицелий грибка проникает глубоко в мякиш. Весь хлеб необходимо выбросить.</p>
           </div>
         </div>
@@ -634,41 +687,21 @@ const Index = () => {
             Простые правила позволяют сохранить хлеб свежим в 2–3 раза дольше обычного.
           </div>
           <div className="storage-grid">
-            <div className="storage-item">
-              <div className="storage-icon">🫙</div>
-              <div className="storage-text">
-                <strong>Хлебница с вентиляцией</strong>
-                <span>Деревянная хлебница с отверстиями поддерживает нужный уровень влажности и даёт хлебу «дышать»</span>
+            {[
+              ['#8a6a3a', 'Хлб', 'Хлебница с вентиляцией', 'Деревянная хлебница с отверстиями поддерживает нужный уровень влажности'],
+              ['#4a7a9a', '−4°', 'Холодильник или морозилка', 'При +4°C плесень почти не растёт. Хлеб можно замораживать до 3 месяцев'],
+              ['#7a8a5a', 'Ткн', 'Тканевый или бумажный пакет', 'Натуральные материалы не задерживают влагу, в отличие от полиэтилена'],
+              ['#5a7a7a', '18°', 'Прохладное место', 'Оптимальная температура — 15–18°C. Не храните рядом с плитой или батареей'],
+              ['#8a5a3a', 'Нрз', 'Нарезайте только перед едой', 'Нарезанный хлеб теряет влагу быстрее и плесневеет интенсивнее целой буханки'],
+            ].map(([color, label, title, desc], i) => (
+              <div className="storage-item" key={i}>
+                <div className="storage-mark" style={{ background: color as string }}>{label}</div>
+                <div className="storage-text">
+                  <strong>{title}</strong>
+                  <span>{desc}</span>
+                </div>
               </div>
-            </div>
-            <div className="storage-item">
-              <div className="storage-icon">❄️</div>
-              <div className="storage-text">
-                <strong>Холодильник или морозилка</strong>
-                <span>При +4°C плесень почти не растёт. Нарезанный хлеб можно замораживать порциями до 3 месяцев</span>
-              </div>
-            </div>
-            <div className="storage-item">
-              <div className="storage-icon">🧺</div>
-              <div className="storage-text">
-                <strong>Тканевый или бумажный пакет</strong>
-                <span>Натуральные материалы не задерживают влагу, в отличие от полиэтилена</span>
-              </div>
-            </div>
-            <div className="storage-item">
-              <div className="storage-icon">🌡️</div>
-              <div className="storage-text">
-                <strong>Прохладное место</strong>
-                <span>Оптимальная температура — 15–18°C. Не храните рядом с плитой или батареей</span>
-              </div>
-            </div>
-            <div className="storage-item">
-              <div className="storage-icon">🔪</div>
-              <div className="storage-text">
-                <strong>Нарезайте только перед едой</strong>
-                <span>Нарезанный хлеб теряет влагу быстрее и плесневеет интенсивнее целой буханки</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -680,21 +713,21 @@ const Index = () => {
           </div>
           <div className="prevention-items">
             <div className="prev-item">
-              <div className="prev-emoji">🫧</div>
+              <div className="prev-mark" style={{ background: '#5a7a8a' }}>М</div>
               <div className="prev-text">
                 <strong>Мойте хлебницу регулярно</strong>
                 <span>Раз в неделю протирайте уксусом или раствором соды — уничтожает споры грибка</span>
               </div>
             </div>
             <div className="prev-item">
-              <div className="prev-emoji">🧂</div>
+              <div className="prev-mark" style={{ background: '#7a7a8a' }}>С</div>
               <div className="prev-text">
                 <strong>Мешочек с солью</strong>
                 <span>Небольшой мешочек соли в хлебнице впитывает лишнюю влагу из воздуха</span>
               </div>
             </div>
             <div className="prev-item">
-              <div className="prev-emoji">🍏</div>
+              <div className="prev-mark" style={{ background: '#6a8a5a' }}>Я</div>
               <div className="prev-text">
                 <strong>Долька яблока</strong>
                 <span>Помогает сохранить мягкость хлеба и немного задержать его черствение</span>
@@ -725,28 +758,14 @@ const Index = () => {
             <div className="author-info">
               Исследовательский проект по биологии<br/>
               7 класс · 2025–2026 учебный год<br/>
-              <span style={{ color: '#c4a87a', fontWeight: 600 }}>Берегите здоровье — выбирайте свежее 🍞</span>
+              <span>Берегите здоровье — выбирайте свежее</span>
             </div>
           </div>
         </div>
       </div>
 
-      <button
-        onClick={() => window.print()}
-        style={{
-          background: '#2c2820',
-          color: '#faf8f5',
-          border: 'none',
-          padding: '12px 32px',
-          fontFamily: "'IBM Plex Sans', sans-serif",
-          fontSize: '13px',
-          fontWeight: 500,
-          letterSpacing: '0.08em',
-          borderRadius: '4px',
-          cursor: 'pointer',
-        }}
-      >
-        🖨️&nbsp; Распечатать буклет
+      <button className="print-btn" onClick={() => window.print()}>
+        Распечатать буклет
       </button>
       <div className="page-hint">A4 · горизонтальная ориентация · без полей</div>
     </div>
